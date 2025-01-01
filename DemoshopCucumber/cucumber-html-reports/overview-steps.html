@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Nop webpage login page</td>
+      <td>06 Dec 2023, 16:04</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">org.step.HooksClass.after()</td>
+              <td>5</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.HooksClass.before()</td>
+              <td>5</td>
+              <td class="duration" data-value="5680600000">5.680</td>
+              <td class="duration" data-value="5680600000">7.019</td>
+              <td class="duration" data-value="28403000000">28.403</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.NopStepClass.userSholdEnterAndSeachTheProduct()</td>
+              <td>4</td>
+              <td class="duration" data-value="8050500000">8.050</td>
+              <td class="duration" data-value="8050500000">9.989</td>
+              <td class="duration" data-value="32202000000">32.202</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.NopStepClass.userSholudEnterAndPaymethodCountinue4()</td>
+              <td>1</td>
+              <td class="duration" data-value="2201000000">2.201</td>
+              <td class="duration" data-value="2201000000">2.201</td>
+              <td class="duration" data-value="2201000000">2.201</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.NopStepClass.userShouldClickTheLoginButton()</td>
+              <td>6</td>
+              <td class="duration" data-value="2989666666">2.989</td>
+              <td class="duration" data-value="2989666666">3.306</td>
+              <td class="duration" data-value="17938000000">17.938</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.NopStepClass.userShouldEnterAndConfirmOrderCoutinue6()</td>
+              <td>1</td>
+              <td class="duration" data-value="11498000000">11.498</td>
+              <td class="duration" data-value="11498000000">11.498</td>
+              <td class="duration" data-value="11498000000">11.498</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.NopStepClass.userShouldEnterAndNewaddressFirstnameaddrLastnameaddrEmailaddrCountryaddrCityaddrAddress1PincodeaddrPhoneaddrContinue1()</td>
+              <td>2</td>
+              <td class="duration" data-value="7797500000">7.797</td>
+              <td class="duration" data-value="7797500000">7.857</td>
+              <td class="duration" data-value="15595000000">15.595</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.NopStepClass.userShouldEnterAndPaymentInformationContinue5()</td>
+              <td>1</td>
+              <td class="duration" data-value="2101000000">2.101</td>
+              <td class="duration" data-value="2101000000">2.101</td>
+              <td class="duration" data-value="2101000000">2.101</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.NopStepClass.userShouldEnterAndShippingAddressContinue2()</td>
+              <td>2</td>
+              <td class="duration" data-value="2094000000">2.094</td>
+              <td class="duration" data-value="2094000000">2.099</td>
+              <td class="duration" data-value="4188000000">4.188</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.NopStepClass.userShouldEnterAndShippingmethodCountinue3()</td>
+              <td>2</td>
+              <td class="duration" data-value="2196000000">2.196</td>
+              <td class="duration" data-value="2196000000">2.202</td>
+              <td class="duration" data-value="4392000000">4.392</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.NopStepClass.userShouldEnterAndShoppingIagreeCheckout()</td>
+              <td>3</td>
+              <td class="duration" data-value="9534666666">9.534</td>
+              <td class="duration" data-value="9534666666">9.785</td>
+              <td class="duration" data-value="28604000000">28.604</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">org.step.NopStepClass.userShouldEnterTheEmailnameAndPassword()</td>
+              <td>5</td>
+              <td class="duration" data-value="1630400000">1.630</td>
+              <td class="duration" data-value="1630400000">1.740</td>
+              <td class="duration" data-value="8152000000">8.152</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>12</td>
+            <td>37</td>
+            <td class="duration">4.196</td>
+            <td class="duration">32.202</td>
+            <td class="duration">2:35.274</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

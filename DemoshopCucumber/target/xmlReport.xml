@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="18.146" tests="3" skipped="0" failures="3" errors="0">
+<testcase classname="To verify demo shop webpage" name="To validate demo shop webpage" time="6.159">
+<failure type="java.lang.NullPointerException">
+<![CDATA[java.lang.NullPointerException
+	at org.global.BaseClass.screenCapture(BaseClass.java:80)
+	at org.step.HooksClass.after(HooksClass.java:43)
+]]>
+</failure>
+<system-out><![CDATA[
+Given user should click the login button....................................passed
+And User should enter the emailname and password............................passed
+]]></system-out>
+</testcase>
+<testcase classname="To verify demo shop webpage" name="To validate demo shop webpage seach page" time="4.896">
+<failure type="java.lang.NullPointerException">
+<![CDATA[java.lang.NullPointerException
+	at org.global.BaseClass.screenCapture(BaseClass.java:80)
+	at org.step.HooksClass.after(HooksClass.java:43)
+]]>
+</failure>
+<system-out><![CDATA[
+Given user should click the login button....................................passed
+And User should enter the emailname and password............................passed
+When user shold enter and seach the product.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="To verify demo shop webpage" name="To validate demo shop webpage shopping  page" time="6.947">
+<failure type="java.lang.NullPointerException">
+<![CDATA[java.lang.NullPointerException
+	at org.global.BaseClass.screenCapture(BaseClass.java:80)
+	at org.step.HooksClass.after(HooksClass.java:43)
+]]>
+</failure>
+<system-out><![CDATA[
+Given user should click the login button....................................passed
+And User should enter the emailname and password............................passed
+When user shold enter and seach the product.................................passed
+When user should enter and shopping,iagree,checkout.........................passed
+]]></system-out>
+</testcase>
+</testsuite>
